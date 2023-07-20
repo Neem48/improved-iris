@@ -28,11 +28,11 @@ def prediction(sepal_length, sepal_width, petal_length, petal_width):
     return "Iris-versicolor"
 
 st.title("Iris Flower Species Prediction App")
-st.subheader.title("Enter the following:")
-s_len = st.subheader.slider("Sepal Length", 0.0, 10.0)
-s_wid = st.subheader.slider("Sepal Width", 0.0, 10.0)
-p_len = st.subheader.slider("Petal Length", 0.0, 10.0)
-p_wid = st.subheader.slider("Petal Width", 0.0, 10.0)
+st.sidebar.title("Enter the following:")
+s_len = st.sidebar.slider("Sepal Length", 0.0, 10.0)
+s_wid = st.sidebar.slider("Sepal Width", 0.0, 10.0)
+p_len = st.sidebar.slider("Petal Length", 0.0, 10.0)
+p_wid = st.sidebar.slider("Petal Width", 0.0, 10.0)
 if st.sidebar.button("Predict"):
 	species_type = prediction(s_len, s_wid, p_len, p_wid)
 	st.write("Species predicted:", species_type)
