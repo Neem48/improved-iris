@@ -39,10 +39,10 @@ s_len = st.sidebar.slider("Sepal Length", 0.0, 10.0)
 s_wid = st.sidebar.slider("Sepal Width", 0.0, 10.0)
 p_len = st.sidebar.slider("Petal Length", 0.0, 10.0)
 p_wid = st.sidebar.slider("Petal Width", 0.0, 10.0)
-classifier = st.sidebar.selectbox("Classifier type:", ("Support Vector Machine", "Logistic Regression", "Random Forest Classifier")
+classifier = st.sidebar.selectbox("Classifier type:", ("Support Vector Machine", "Logistic Regression", "Random Forest Classifier"))
 if st.sidebar.button("Predict"):
 	if classifier == "Support Vector Machine":
-        	species_type = prediction(svc_model,s_len, s_wid, p_len, p_wid)
+		species_type = prediction(svc_model,s_len, s_wid, p_len, p_wid)
 		score = svc_model.score(X_train, y_train)
 	elif classifier == "Logistic Regression":
 		species_type = prediction(log_reg,s_len, s_wid, p_len, p_wid)
